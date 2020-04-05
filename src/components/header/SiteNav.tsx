@@ -7,7 +7,7 @@ import { css } from '@emotion/core';
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
 import Facebook from '../icons/facebook';
-import Twitter from '../icons/twitter';
+import Instagram from '../icons/instagram';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
@@ -134,13 +134,13 @@ class SiteNav extends React.Component<SiteNavProps> {
           <ul css={NavStyles} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
-              <Link to="/">Home</Link>
+              <Link to="/">Homepage</Link>
             </li>
             <li role="menuitem">
-              <Link to="/about">About</Link>
+              <Link to="/about">Quem somos</Link>
             </li>
             <li role="menuitem">
-              <Link to="/tags/getting-started/">Getting Started</Link>
+              <Link to="/tags/getting-started/">Notícias</Link>
             </li>
           </ul>
         </SiteNavLeft>
@@ -157,15 +157,15 @@ class SiteNav extends React.Component<SiteNavProps> {
                 <Facebook />
               </a>
             )}
-            {config.twitter && (
+            {config.instagram && (
               <a
                 css={SocialLink}
-                href={config.twitter}
-                title="Twitter"
+                href={config.instagram}
+                title="instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter />
+                <Instagram />
               </a>
             )}
           </SocialLinks>
