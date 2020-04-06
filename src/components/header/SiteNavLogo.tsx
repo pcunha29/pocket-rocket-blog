@@ -38,7 +38,7 @@ const SiteNavLogo = () => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
-        logo: file(relativePath: { eq: "img/ghost-logo3.png" }) {
+        logo: file(relativePath: { eq: "img/ghost-logo4.png" }) {
           childImageSharp {
             fixed {
               ...GatsbyImageSharpFixed

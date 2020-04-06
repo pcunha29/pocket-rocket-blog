@@ -53,7 +53,7 @@ const config: WebsiteConfig = {
   title: 'PocketRocket',
   description: 'Aqui vai nascer algo inédito :)',
   coverImage: 'img/blog-cover4.jpg',
-  logo: 'img/ghost-logo3.png',
+  logo: 'img/ghost-logo4.png',
   lang: 'en',
   siteUrl: 'https://gatsby-casper.netlify.com',
   facebook: 'https://www.facebook.com/ghost',
