@@ -5,21 +5,16 @@ import Helmet from 'react-helmet';
 
 import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import PostCard from '../components/PostCard';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import config from '../website-config';
-import Pagination from '../components/Pagination';
 
 import {
   inner,
   outer,
-  PostFeed,
-  PostFeedRaise,
   SiteDescription,
   SiteHeader,
   SiteHeaderContent,
-  SiteMain,
   SiteTitle,
 } from '../styles/shared';
 import { PageContext } from './post';
@@ -149,27 +144,12 @@ const IndexPage: React.FC<IndexProps> = props => {
                 )}
               </SiteTitle>
               <SiteDescription>{config.description}</SiteDescription>
+              <SiteNav isHome />
             </SiteHeaderContent>
-            <SiteNav isHome />
+            
           </div>
         </header>
-        <main id="site-main" css={[SiteMain, outer]}>
-          <div css={inner}>
-            <div css={[PostFeed, PostFeedRaise]}>
-              {props.data.allMarkdownRemark.edges.map(post => {
-                // filter out drafts in production
-                return (
-                  (post.node.frontmatter.draft !== true ||
-                    process.env.NODE_ENV !== 'production') && (
-                    <PostCard key={post.node.fields.slug} post={post.node} />
-                  )
-                );
-              })}
-            </div>
-          </div>
-        </main>
         {props.children}
-        <Pagination currentPage={props.pageContext.currentPage} numPages={props.pageContext.numPages} />
         <Footer />
       </Wrapper>
     </IndexLayout>

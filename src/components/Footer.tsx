@@ -9,9 +9,11 @@ import { outer, inner } from '../styles/shared';
 import config from '../website-config';
 
 const SiteFooter = css`
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 0 40px 0;
   color: #fff;
   background: ${setLightness('0.0015', colors.darkgrey)};
 `;
@@ -78,23 +80,16 @@ const Footer: React.FC = () => {
           )}
         </section>
         <SiteFooterNav>
-          <Link to="/">Latest Posts</Link>
           {config.facebook && (
             <a href={config.facebook} target="_blank" rel="noopener noreferrer">
               Facebook
             </a>
           )}
-          {config.twitter && (
-            <a href={config.twitter} target="_blank" rel="noopener noreferrer">
-              Twitter
+          {config.instagram && (
+            <a href={config.instagram} target="_blank" rel="noopener noreferrer">
+              instagram
             </a>
           )}
-
-          <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-            Ghost
-          </a>
-
-          <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>
     </footer>
