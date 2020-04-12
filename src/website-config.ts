@@ -24,7 +24,7 @@ export interface WebsiteConfig {
   /**
    * hide or show all email subscribe boxes
    */
-  showSubscribe: boolean;
+  //showSubscribe: boolean;
   /**
    * create a list on mailchimp and then create an embeddable signup form. this is the form action
    */

@@ -82,15 +82,6 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
             </section>
           </div>
         </main>
-        <aside css={outer}>
-          <div css={inner}>
-            <div css={PostFeed}>
-              {edges.map(({ node }) => (
-                <PostCard key={node.fields.slug} post={node} />
-              ))}
-            </div>
-          </div>
-        </aside>
       </Wrapper>
     </IndexLayout>
   );

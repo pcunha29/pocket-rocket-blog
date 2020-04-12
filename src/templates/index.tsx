@@ -146,10 +146,8 @@ const IndexPage: React.FC<IndexProps> = props => {
               <SiteDescription>{config.description}</SiteDescription>
               <SiteNav isHome />
             </SiteHeaderContent>
-            
           </div>
         </header>
-        {props.children}
         <Footer />
       </Wrapper>
     </IndexLayout>
